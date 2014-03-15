@@ -1,0 +1,17 @@
+{
+    "maxIndex": 3,
+    "categories": [
+        {
+            "name": "Server Administration",
+            "description": "Tips for server admins!",
+            "startIndex": 0,
+            "lastIndex": 1
+        },
+        {
+            "name": "Plugin Development",
+            "description": "Coding tips HURRAY",
+            "startIndex": 2,
+            "lastIndex": 3
+        }
+    ]
+}

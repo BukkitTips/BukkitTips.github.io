@@ -1,0 +1,7 @@
+{
+    "title": "Maven shading protip",
+    "content": [
+        "If using Maven's shade plugin, make sure you've set the scope on Bukkit to <b>provided</b> or you're in for a nasty surprise",
+        "Your jar will contain the entire Bukkit code!"
+    ]
+}

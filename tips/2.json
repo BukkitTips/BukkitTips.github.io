@@ -1,0 +1,6 @@
+{
+    "title": "Static access can lead to shocking results!",
+    "content": [
+        "Storing data statically will persist through reloads, which can result in memory leaks or unexpected surprises in your code!"
+    ]
+}

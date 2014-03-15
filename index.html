@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Bukkit.Tips - </title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var tipsData;
+        function loadTipsData(success) {
+            $.getJSON("tips/tips.json", function (data) {
+                tipsData = data
+                success();
+            })
+        }
+        function getRandomTipID() {
+            return randInt(tipsData.maxIndex);
+        }
+        function randInt(max) {
+            return Math.floor(Math.random() * (max + 1))
+        }
+        function loadTip(id) {
+            $.getJSON("tips/" + id + ".json", function (data) {
+                $("#title").html(data.title);
+                var content = "";
+                for (var i = 0; i < data.content.length; i++) {
+                    content += data.content[i];
+                    content += "<br />";
+                }
+                $("#content").html(content);
+            });
+        }
+        $(function () {
+            $("#random").click(function(){
+                loadTip(getRandomTipID());
+            });
+            loadTipsData(function() {
+                loadTip(getRandomTipID());
+            });
+            if(typeof tipsData != 'undefined') {
+                alert("Page failed to load properly! Oops");
+            }
+        });
+    </script>
+</head>
+<body>
+<button id="random">RANDOM!</button>
+<div style="font-weight: bold" id="title"></div>
+<br />
+<div id="content"></div>
+</body>
+</html>

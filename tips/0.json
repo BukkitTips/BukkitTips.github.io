@@ -1,0 +1,9 @@
+{
+    "title": "Less is more with startup parameters!",
+    "content": [
+        "Plenty of tutorials may give you a long, complicated example startup script.",
+        "",
+        "Often, these additional parameters are completely unnecessary! Here is a fully functional startup:",
+        "<b>java -Xmx1024M -jar craftbukkit.jar -o true</b>"
+    ]
+}
