@@ -4,6 +4,6 @@
         "Plenty of tutorials may give you a long, complicated example startup script.",
         "",
         "Often, these additional parameters are completely unnecessary! Here is a fully functional startup:",
-        "<b>java -Xmx1024M -jar craftbukkit.jar -o true</b>"
+        "<b>java -Dfile.encoding=UTF-8 -Xmx1024M -jar craftbukkit.jar -o true</b>"
     ]
 }
